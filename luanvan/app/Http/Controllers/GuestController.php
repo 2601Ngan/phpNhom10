@@ -13,24 +13,26 @@ use Illuminate\Support\Facades\Validator;
 
 class GuestController extends Controller
 {
-    //
     public function index(): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application
     {
-//        Session::forget('cart');
+    //Session::forget('cart');
         $new_products = Product::latest()->take(10)->get();
         $category = Category::all();
         $cart = session()->get('cart');
-        if ($cart) {
+        if ($cart) 
+        {
             $total = 0;
-            foreach ($cart as $item) {
+            foreach ($cart as $item) 
+            {
                 $total += $item['quantity'] * $item['price'];
             }
             $count = count($cart);
             return view('frontend/page/welcome', compact('new_products', 'cart', 'total', 'count', 'category'));
-        } else {
+        } 
+        else 
+        {
             return view('frontend/page/welcome', compact('new_products', 'category'));
         }
-
     }
 
     public function products()
@@ -39,14 +41,18 @@ class GuestController extends Controller
         $category = Category::all();
         $sell = Product::latest()->take(4)->get();
         $cart = session()->get('cart');
-        if ($cart) {
+        if ($cart) 
+        {
             $total = 0;
-            foreach ($cart as $item) {
+            foreach ($cart as $item) 
+            {
                 $total += $item['quantity'] * $item['price'];
             }
             $count = count($cart);
             return view('frontend/page/products', compact('product', 'sell', 'category', 'cart', 'total', 'count'));
-        } else {
+        } 
+        else 
+        {
             return view('frontend/page/products', compact('product', 'category', 'sell'));
         }
     }
@@ -318,9 +324,7 @@ class GuestController extends Controller
                         $new_quantity = $quantity - $product->quantity;
                         // cập nhật sản phẩm
                         DB::table('products')->where('id', '=', $id_product)
-                            ->update([
-                                'quantity' => $new_quantity
-                            ]);
+                            ->update(['quantity' => $new_quantity]);
                     }
                 }
             }
@@ -347,11 +351,9 @@ class GuestController extends Controller
         $category = Category::all();
         $categories = Category::where('category_name', 'LIKE', "%$key%")->get();
         $product = [];
-
         foreach ($categories as $cat) {
             $product = array_merge($product, $cat->products()->get()->toArray());
         }
-
         $page = $request->has('page') ? $request->query('page') : 1;
         $perPage = 10;
         $product = array_slice($product, ($page - 1) * $perPage, $perPage);

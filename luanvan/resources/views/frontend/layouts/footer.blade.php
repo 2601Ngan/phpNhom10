@@ -12,9 +12,9 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                             ut.</p>
                         <ul class="footer-links">
-                            <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                            <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                            <li><a href="#"><i class="fa fa-map-marker"></i>65 Chùa Bộc</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+84 3456 98765</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>electro@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>

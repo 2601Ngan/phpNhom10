@@ -112,8 +112,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="update{{$item->id}}">Cập
-                                                                nhật danh mục</h5>
+                                                            <h5 class="modal-title" id="update{{$item->id}}">Cập nhật danh mục</h5>
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
@@ -126,8 +125,7 @@
                                                                 @csrf
                                                                 @method('PUT')
                                                                 <div class="form-group">
-                                                                    <label for="updatedCategoryName">Tên danh
-                                                                        mục</label>
+                                                                    <label for="updatedCategoryName">Tên danh mục</label>
                                                                     <input type="text" class="form-control"
                                                                            id="updatedCategoryName"
                                                                            placeholder="Nhập tên danh mục cập nhật"
@@ -140,8 +138,7 @@
                                                                             data-dismiss="modal">Đóng
                                                                     </button>
                                                                     <!-- Button gửi form -->
-                                                                    <button type="submit" class="btn btn-primary">Cập
-                                                                        nhật
+                                                                    <button type="submit" class="btn btn-primary">Cập nhật
                                                                     </button>
                                                                 </div>
                                                             </form>
@@ -159,8 +156,7 @@
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
-                                                            <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa
-                                                                danh mục</h5>
+                                                            <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa danh mục</h5>
                                                             <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
